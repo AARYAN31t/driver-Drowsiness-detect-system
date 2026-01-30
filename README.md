@@ -1,46 +1,16 @@
-# Driver Drowsiness Detection System
+# React + Vite
 
-A full-stack AI web application that detects driver drowsiness using a webcam and alerts the user with an alarm and visual warnings.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Features
-- **Real-time Eye Tracking**: Uses MediaPipe Face Mesh for precise eye landmark detection.
-- **Drowsiness Detection**: Calculates Eye Aspect Ratio (EAR) to detect closed eyes.
-- **Audio & Visual Alerts**: Triggers a loud alarm and flashing UI when drowsiness is detected.
-- **Dashboard**: React-based dashboard with live video feed and status updates.
+Currently, two official plugins are available:
 
-## Tech Stack
-- **Backend**: Python, Flask, OpenCV, MediaPipe, Pygame
-- **Frontend**: React, Vite
-- **Communication**: HTTP (Axios) + MJPEG Stream
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Setup & Running
+## React Compiler
 
-### Prerequisites
-- Python 3.8+
-- Node.js & npm
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-### 1. Backend Setup
-Recommended to use a virtual environment to avoid conflicts.
-```bash
-cd backend
-python -m venv venv
-.\venv\Scripts\activate  # Windows
-pip install -r requirements.txt
-python generate_sound.py
-python app.py
-```
-The backend will run on `http://localhost:5000`.
+## Expanding the ESLint configuration
 
-### 2. Frontend Setup
-```bash
-cd frontend
-npm install
-npm run dev
-```
-The frontend will run on `http://localhost:5173`.
-
-## Usage
-1. Open the frontend URL in your browser.
-2. Allow camera access.
-3. The dashboard will show your status ("Awake" or "Drowsy").
-4. Close your eyes for >2 seconds to trigger the alarm.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
